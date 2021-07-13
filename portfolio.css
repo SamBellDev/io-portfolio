@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  /* I believe this makes the scroll transition in the nav smooth instead of a snap*/
+  box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+}
+
+/* I use .border for bug fixing*/
+.border {
+	border: 1px solid #ff0000;
+}
+
+.everything-container {
+	margin: 0% 10% 0 10%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.nav-container{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+
+.title-container, .projects-container {
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.socials-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.heading {
+	text-align: center;
+	width: 100%;
+	scroll-margin: 20px;
+	/* I've used scroll-margin so that the nav doesn't render over the heading*/
+}
+
+footer img {
+	width: 80px;
+	height : 80px;
+}
