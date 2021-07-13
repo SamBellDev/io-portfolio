@@ -4,15 +4,19 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
+  /* I believe this makes the scroll transition in the nav smooth instead of a snap*/
+  box-sizing: border-box;
 }
+
+
 
 a {
 	text-decoration: none;
 }
 
 img {
-	width: 380px;
-	height: 380px;
+	width: 350px;
+	height: 350px;
 	border-radius: 50%;
 }
 
@@ -29,7 +33,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .nav-container{
@@ -61,6 +65,7 @@ header {
 	text-align: center;
 	width: 100%;
 	scroll-margin: 20px;
+	/* I've used scroll-margin so that the nav doesn't render over the heading*/
 }
 
 footer img {
