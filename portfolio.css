@@ -40,7 +40,7 @@ header {
 	justify-content: space-around;
 }
 
-.title-container, .projects-container {
+.title-container, .projects-card-container {
 	display:flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -60,6 +60,21 @@ header {
 }
 
 footer img {
-	width: 80px;
-	height : 80px;
+	width: 40px;
+	height : 40px;
+	border-radius: 0;
 }
+
+@media screen and (min-width: 1080px) {
+	 .projects-container {
+		 	 display: flex;
+			 flex-flow: row nowrap;
+			 justify-content: space-evenly;
+    
+  }
+  	 .projects-card-container {
+		 display: flex;
+		 flex-flow: column nowrap;
+		 width: 40%;
+  }
+} 
