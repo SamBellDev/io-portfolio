@@ -8,8 +8,6 @@ html {
   box-sizing: border-box;
 }
 
-
-
 a {
 	text-decoration: none;
 }
@@ -42,14 +40,8 @@ header {
 	justify-content: space-around;
 }
 
-.title-container {
+.title-container, .projects-container {
 	display:flex;
-	flex-flow: column nowrap;
-	align-items: center;
-}
-
-.projects-container {
-	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
 }
@@ -61,7 +53,6 @@ header {
 }
 
 .heading {
-	display: block;
 	text-align: center;
 	width: 100%;
 	scroll-margin: 20px;
