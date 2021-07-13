@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
+* {
+  	box-sizing: border-box;
+}
+
 html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  scroll-behavior: smooth;
-  /* I believe this makes the scroll transition in the nav smooth instead of a snap*/
-  box-sizing: border-box;
+  	font-family: 'Open Sans', sans-serif;
+  	font-size: 16px;
+  	scroll-behavior: smooth;
+  	/* I believe this makes the scroll transition in the nav smooth instead of a snap*/
 }
 
 a {
@@ -18,6 +21,10 @@ img {
 	border-radius: 50%;
 }
 
+p {
+	margin: 0, 0, 16, 0;
+}
+
 /* I use .border for bug fixing*/
 .border {
 	border: 1px solid #ff0000;
@@ -28,10 +35,10 @@ img {
 }
 
 header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
+  	position: sticky;
+  	top: 0;
+  	width: 100%;
+  	background-color: #ffffff;
 }
 
 .nav-container{
@@ -40,7 +47,7 @@ header {
 	justify-content: space-around;
 }
 
-.title-container, .projects-container {
+.title-container, .projects-card-container {
 	display:flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -59,7 +66,37 @@ header {
 	/* I've used scroll-margin so that the nav doesn't render over the heading*/
 }
 
-footer img {
-	width: 80px;
-	height : 80px;
+footer {
+	margin-bottom: 16;
 }
+
+footer img {
+	width: 40px;
+	height : 40px;
+	border-radius: 0;
+}
+
+footer p {
+	display: block;
+	text-align: center;
+	margin: 0;
+}
+
+@media screen and (min-width: 1080px) {
+	 .projects-container {
+		 display: flex;
+		 flex-flow: row nowrap;
+		 justify-content: space-evenly;
+    
+  }
+  	 .projects-card-container {
+		 display: flex;
+		 flex-flow: column nowrap;
+		 width: 40%;
+  }
+  .nav-container {
+  		 display: flex;
+  		 flex-flow: row nowrap;
+  		 justify-content: space-evenly; 	
+  }
+} 
