@@ -85,20 +85,20 @@ footer p {
 }
 
 @media screen and (min-width: 1080px) {
-	 .projects-container {
-		 display: flex;
-		 flex-flow: row nowrap;
-		 justify-content: space-evenly;
+	.projects-container {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
     
   }
-  	 .projects-card-container {
-		 display: flex;
-		 flex-flow: column nowrap;
-		 width: 40%;
+  	.projects-card-container {
+		display: flex;
+		flex-flow: column nowrap;
+		width: 40%;
   }
-  .nav-container {
-  		 display: flex;
-  		 flex-flow: row nowrap;
-  		 justify-content: space-evenly; 	
+	.nav-container {
+  		display: flex;
+  		flex-flow: row nowrap;
+  		justify-content: space-evenly; 	
   }
 } 
