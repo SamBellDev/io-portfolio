@@ -22,7 +22,7 @@ img {
 }
 
 p {
-	margin: 0, 0, 16, 0;
+	margin: 0, 0, 16px, 0;
 }
 
 /* I use .border for bug fixing*/
@@ -62,8 +62,10 @@ header {
 .heading {
 	text-align: center;
 	width: 100%;
+}
+
+section {
 	scroll-margin: 20px;
-	/* I've used scroll-margin so that the nav doesn't render over the heading*/
 }
 
 footer {
@@ -83,20 +85,20 @@ footer p {
 }
 
 @media screen and (min-width: 1080px) {
-	 .projects-container {
-		 display: flex;
-		 flex-flow: row nowrap;
-		 justify-content: space-evenly;
+	.projects-container {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
     
   }
-  	 .projects-card-container {
-		 display: flex;
-		 flex-flow: column nowrap;
-		 width: 40%;
+  	.projects-card-container {
+		display: flex;
+		flex-flow: column nowrap;
+		width: 40%;
   }
-  .nav-container {
-  		 display: flex;
-  		 flex-flow: row nowrap;
-  		 justify-content: space-evenly; 	
+	.nav-container {
+  		display: flex;
+  		flex-flow: row nowrap;
+  		justify-content: space-evenly; 	
   }
 } 
