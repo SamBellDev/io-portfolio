@@ -62,8 +62,10 @@ header {
 .heading {
 	text-align: center;
 	width: 100%;
+}
+
+section {
 	scroll-margin: 20px;
-	/* I've used scroll-margin so that the nav doesn't render over the heading*/
 }
 
 footer {
