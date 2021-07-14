@@ -7,8 +7,8 @@
 html {
 	font-family: sans-serif;
 	font-size: 16px;
+	/* I believe this makes the scroll transition in the nav smooth instead of a snap*/
   	scroll-behavior: smooth;
-  	/* I believe this makes the scroll transition in the nav smooth instead of a snap*/
 }
 
 a {
