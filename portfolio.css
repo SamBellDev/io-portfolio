@@ -14,7 +14,7 @@ html {
 
 a {
 	text-decoration: none;
-	font-family: 'Ruda';
+	font-family: 'Ruda', sans-serif;
 }
 
 a, a:visited {
