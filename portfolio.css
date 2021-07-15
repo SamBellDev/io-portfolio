@@ -2,6 +2,7 @@
 
 * {
 	box-sizing: border-box;
+	background-color: #e1f3f7;
 }
 
 html {
@@ -13,42 +14,63 @@ html {
 
 a {
 	text-decoration: none;
-	font-family: 'Ruda';
+	font-family: Ruda, sans-serif;
+}
+
+a, a:visited {
+	color: inherit;
 }
 
 img {
-	width: 350px;
-	height: 350px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 }
 
 h1, h2, h3 {
-	font-family: 'Ruda', sans-serif;
+	font-family: Ruda, sans-serif;
+	color: #1e3629;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
 }
 
 p {
 	font-family: 'Roboto Slab', sans-serif;
-	margin: 0, 0, 16px, 0;
+	margin: 0 0 16px 0;
+	color: #565656;
+	font-size: 1.2rem;
+	line-height: 1.5;
 }
 
 .everything-container {
-	margin: 0% 10% 0 10%;
+	margin: 0 10% 0 10%;
 }
 
 header {
   	position: sticky;
-  	top: 0;
-  	width: 100%;
-  	background-color: #ffffff;
+  	top: 0;	
 }
 
 .nav-container{
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
+	/*Keeps the nav in front of the scrolling splash*/
+	z-index: 3;
+	font-size: 1.2rem;
 }
 
-.title-container, .projects-card-container {
+.title-container, .left-project-card-container, .right-project-card-container {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -66,7 +88,7 @@ header {
 }
 
 section {
-	scroll-margin: 20px;
+	scroll-margin: 25px;
 }
 
 footer {
@@ -86,18 +108,54 @@ footer p {
 }
 
 @media screen and (min-width: 1080px) {
+	.everything-container {
+		margin: 0;
+	}
 	.projects-container {
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-evenly;
-    
+		justify-content: space-evenly;   
 	}
-  	.projects-card-container {
-		display: flex;
-		flex-flow: column nowrap;
+	/*seperated project containers to left and right so I can create a meaningful, visible, void between the p elements when they display adjacent*/
+  	.left-project-card-container, .right-project-card-container {
 		width: 40%;
 	}
+	.left-project-card-container {
+		padding-right: 40px;
+	}
+	.right-project-card-container {
+		padding-left: 40px;
+	}
 	.nav-container {
-  		justify-content: space-evenly; 	
+  		justify-content: flex-end;
+		padding-right: 5%; 	
+	}
+	.nav-container a {
+		margin-left: 10px;
+		font-size: 1.5rem;
+	}
+	.title-container{
+		align-items: flex-start;
+	}
+	.title-container h1, .title-container h2, .title-container p{
+		text-align: left;
+		margin-left: 5%;
+		width: 25%;
+		/*adding transparency to the background of the text*/
+		background-color: #ffffff00;
+	}
+	#about-me, #projects {
+		height: 100vh;
+	}
+	/*I'm essentially fixing the image to the back for scrolling purposes and using cover to make it take up the screen. The linear gradient (I believe) gives me a little grainy effect.*/
+	.scrolling-splash {
+		background-image: url("proposal.jpg");
+	  	background-attachment: fixed;
+	  	background-position: center;
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	  	min-height: 100%;
+	  	display: flex;
+	  	justify-content: center;
 	}
 } 
