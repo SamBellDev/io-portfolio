@@ -70,7 +70,7 @@ header {
 	font-size: 1.2rem;
 }
 
-.title-container, .left-project-card-container, .right-project-card-container {
+.title-container, .project-card-container {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -116,15 +116,8 @@ footer p {
 		flex-flow: row nowrap;
 		justify-content: space-evenly;   
 	}
-	/*seperated project containers to left and right so I can create a meaningful, visible, void between the p elements when they display adjacent*/
-  	.left-project-card-container, .right-project-card-container {
-		width: 40%;
-	}
-	.left-project-card-container {
-		padding-right: 40px;
-	}
-	.right-project-card-container {
-		padding-left: 40px;
+	.project-card-container {
+		width: 42.5%;
 	}
 	.nav-container {
   		justify-content: flex-end;
