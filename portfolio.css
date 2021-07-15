@@ -18,8 +18,8 @@ a {
 }
 
 img {
-	width: 350px;
-	height: 350px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 }
 
@@ -28,10 +28,24 @@ h1, h2, h3 {
 	color: #76323f;
 }
 
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
 p {
 	font-family: 'Roboto Slab', sans-serif;
 	margin: 0, 0, 16px, 0;
 	color: #565656;
+	font-size: 1.2rem;
+	line-height: 1.5;
 }
 
 .everything-container {
@@ -50,7 +64,7 @@ header {
 	justify-content: space-around;
 }
 
-.title-container, .projects-card-container {
+.title-container, .left-project-card-container, .right-project-card-container {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -91,15 +105,24 @@ footer p {
 	.projects-container {
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-evenly;
-    
+		justify-content: space-evenly;   
 	}
-  	.projects-card-container {
+	/*seperated project containers to left and right so I can create a meaningful, visible, void between the p elements when they display adjacent*/
+  	.left-project-card-container, .right-project-card-container {
 		display: flex;
 		flex-flow: column nowrap;
-		width: 40%;
+		width: 50%;
+	}
+	.left-project-card-container {
+		padding-right: 40px;
+	}
+	.right-project-card-container {
+		padding-left: 40px;
 	}
 	.nav-container {
   		justify-content: space-evenly; 	
+	}
+	#about-me, #projects {
+		height: 100vh;
 	}
 } 
