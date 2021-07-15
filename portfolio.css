@@ -2,7 +2,7 @@
 
 * {
 	box-sizing: border-box;
-	background-color: #d7cec7;
+	background-color: #e1f3f7;
 }
 
 html {
@@ -17,6 +17,10 @@ a {
 	font-family: 'Ruda';
 }
 
+a, a:visited {
+	color: inherit;
+}
+
 img {
 	width: 250px;
 	height: 250px;
@@ -25,7 +29,7 @@ img {
 
 h1, h2, h3 {
 	font-family: 'Ruda', sans-serif;
-	color: #76323f;
+	color: #1e3629;
 }
 
 h1 {
@@ -54,16 +58,16 @@ p {
 
 header {
   	position: sticky;
-  	top: 0;
-  	width: 100%;
+  	top: 0;	
 }
 
 .nav-container{
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-around;
+	justify-content:space-around;
 	/*Keeps the nav in front of the scrolling splash*/
 	z-index: 3;
+	font-size: 1.2rem;
 }
 
 .title-container, .left-project-card-container, .right-project-card-container {
@@ -84,7 +88,7 @@ header {
 }
 
 section {
-	scroll-margin: 20px;
+	scroll-margin: 25px;
 }
 
 footer {
@@ -123,12 +127,27 @@ footer p {
 		padding-left: 40px;
 	}
 	.nav-container {
-  		justify-content: space-evenly; 	
+  		justify-content: flex-end;
+		padding-right: 5%; 	
+	}
+	.nav-container a {
+		margin-left: 10px;
+		font-size: 1.5rem;
+	}
+	.title-container{
+		align-items: flex-start;
+	}
+	.title-container h1, .title-container h2, .title-container p{
+		text-align: left;
+		margin-left: 5%;
+		width: 25%;
+		/*adding transparency to the background of the text*/
+		background-color: #ffffff00;
 	}
 	#about-me, #projects {
 		height: 100vh;
 	}
-	/*wxperimental code*/
+	/*I'm essentially fixing the image to the back for scrolling purposes and using cover to make it take up the screen. The linear gradient (I believe) gives me a little grainy effect.*/
 	.scrolling-splash {
 		background-color: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)); 
 		background-image: url("proposal.jpg");
