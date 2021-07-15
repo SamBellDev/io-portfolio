@@ -62,6 +62,8 @@ header {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
+	/*Keeps the nav in front of the scrolling splash*/
+	z-index: 3;
 }
 
 .title-container, .left-project-card-container, .right-project-card-container {
@@ -102,6 +104,9 @@ footer p {
 }
 
 @media screen and (min-width: 1080px) {
+	.everything-container {
+		margin: 0;
+	}
 	.projects-container {
 		display: flex;
 		flex-flow: row nowrap;
@@ -109,9 +114,7 @@ footer p {
 	}
 	/*seperated project containers to left and right so I can create a meaningful, visible, void between the p elements when they display adjacent*/
   	.left-project-card-container, .right-project-card-container {
-		display: flex;
-		flex-flow: column nowrap;
-		width: 50%;
+		width: 40%;
 	}
 	.left-project-card-container {
 		padding-right: 40px;
@@ -124,5 +127,17 @@ footer p {
 	}
 	#about-me, #projects {
 		height: 100vh;
+	}
+	/*wxperimental code*/
+	.scrolling-splash {
+		background-color: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)); 
+		background-image: url("proposal.jpg");
+	  	background-attachment: fixed;
+	  	background-position: center;
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	  	min-height: 100%;
+	  	display: flex;
+	  	justify-content: center;
 	}
 } 
